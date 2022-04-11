@@ -1,0 +1,105 @@
+:root {
+    --darkBg: #292929;
+    --lightBg: white;
+    --bgColor: #292929;
+}
+
+/*Element Selectors*/
+body 
+{
+    background: var(--bgColor);
+    font-family: 'verdana';
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+/* Classes */
+.header {
+    font-family: 'Prompt', sans-serif;
+    background: -webkit-linear-gradient(0deg, rgb(249, 197, 141) 20%, rgb(244, 146, 240, 1) 100%); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+/* Cursor Transition */
+.header::before,
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.header::before {
+    background: var(--bgColor);
+    animation: cursorSlide 2s ease forwards;
+}
+
+.header::after {
+    width: .125em;
+    background: rgb(244, 146, 240, 1);
+    animation: cursorSlide 2s ease forwards;
+}
+
+@keyframes cursorSlide {
+    0% { left: 0%; }
+    75% { left: 100%; top: 0;}
+    100% { left: 100%; top: 100%;}
+}
+
+/* Header and Home Page Element Styling */
+.home-parent {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.home-child {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: left;
+    align-content: left;
+
+    /* Vertical Center */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.home-child2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: left;
+    align-content: left;
+}
+
+/* A Red Button */
+.button {
+    background: -webkit-linear-gradient(0deg, rgb(249, 197, 141) 20%, rgb(244, 146, 240, 1) 100%); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.5em;
+    padding: .5em;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
