@@ -1,10 +1,14 @@
 :root {
-    --darkBg: #292929;
-    --lightBg: white;
-    --bgColor: #292929;
+  --bgColor: #292929;
+  --ib1Color: #FF4742;
 }
 
 /*Element Selectors*/
+
+html, body {
+  margin:0;
+}
+
 body 
 {
     background: var(--bgColor);
@@ -61,45 +65,58 @@ h2 {
 .home-parent {
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     align-content: center;
+    height: 100vh;
 }
 
 .home-child {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: left;
-    align-content: left;
-
-    /* Vertical Center */
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: left;
+  align-content: left;
 }
 
 .home-child2 {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: left;
-    align-content: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 45%;
 }
 
-/* A Red Button */
-.button {
-    background: -webkit-linear-gradient(0deg, rgb(249, 197, 141) 20%, rgb(244, 146, 240, 1) 100%); 
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Prompt', sans-serif;
-    font-size: 1.5em;
-    padding: .5em;
-    border-radius: .5em;
-    border: none;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
+/* Information Buttons */
+.info-button {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  width: 23%;
+  outline: 0;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  transition: background-color .5s, color .5s;
+}
+
+.info-button:hover,
+.info-button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.info-button:active {
+  opacity: .5;
 }
