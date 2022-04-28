@@ -3,72 +3,109 @@
   --ib1Color: #FF4742;
 }
 
+/*
+=============================================
+ RADIO BUTTONS
+=============================================== */
+
+#radios label {
+  cursor: pointer;
+  position: relative;
+}
+
+#radios label + label {
+  margin-left: 15px;
+}
+
+input[type="radio"] {
+  opacity: 0; /* hidden but still tabable */
+  position: absolute;
+}
+
+input[type="radio"] + span {
+  font-family: 'Material Icons';
+  color: #B3CEFB;
+  border-radius: 50%;
+  padding: 12px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+
+input[type="radio"]:checked + span {
+  color: #D9E7FD;
+  background-color: #4285F4;
+}
+
+input[type="radio"]:focus + span {
+  color: #fff;
+}
+
 /*Element Selectors*/
 
 html, body {
-  margin:0;
+  margin: 0;
 }
 
 body 
 {
-    background: var(--bgColor);
-    font-family: 'verdana';
+  background: var(--bgColor);
+  font-family: 'verdana';
 }
 
 h1 {
-    font-size: 5em;
+  font-size: 5em;
 }
 
 h2 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 /* Classes */
 .header {
-    font-family: 'Prompt', sans-serif;
-    background: -webkit-linear-gradient(0deg, rgb(249, 197, 141) 20%, rgb(244, 146, 240, 1) 100%); 
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: relative;
+  font-family: 'Prompt', sans-serif;
+  background: -webkit-linear-gradient(0deg, rgb(249, 197, 141) 20%, rgb(244, 146, 240, 1) 100%); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
 }
 
 /* Cursor Transition */
 .header::before,
 .header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .header::before {
-    background: var(--bgColor);
-    animation: cursorSlide 2s ease forwards;
+  background: var(--bgColor);
+  animation: cursorSlide 2s ease forwards;
 }
 
 .header::after {
-    width: .125em;
-    background: rgb(244, 146, 240, 1);
-    animation: cursorSlide 2s ease forwards;
+  width: .125em;
+  background: rgb(244, 146, 240, 1);
+  animation: cursorSlide 2s ease forwards;
 }
 
 @keyframes cursorSlide {
-    0% { left: 0%; }
-    75% { left: 100%; top: 0;}
-    100% { left: 100%; top: 100%;}
+  0% { left: 0%; }
+  75% { left: 100%; top: 0;}
+  100% { left: 100%; top: 100%;}
 }
 
 /* Header and Home Page Element Styling */
 .home-parent {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
 }
 
 .home-child {
@@ -88,8 +125,6 @@ h2 {
 
 /* Information Buttons */
 .info-button {
-  background: #FF4742;
-  border: 1px solid #FF4742;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
@@ -110,13 +145,55 @@ h2 {
   transition: background-color .5s, color .5s;
 }
 
-.info-button:hover,
 .info-button:active {
+  opacity: .5;
+}
+
+/* Button Colors */
+#button1 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+}
+
+#button1:hover,
+#button1:active {
   background-color: initial;
   background-position: 0 0;
   color: #FF4742;
 }
 
-.info-button:active {
-  opacity: .5;
+#button2 {
+  background: #ffc342;
+  border: 1px solid #ffc342;
+}
+
+#button2:hover,
+#button2:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ffc342;
+}
+
+#button3 {
+  background: #ff42b0;
+  border: 1px solid #ff42b0;
+}
+
+#button3:hover,
+#button3:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ff42b0;
+}
+
+#button4 {
+  background: #4294ff;
+  border: 1px solid #4294ff;
+}
+
+#button4:hover,
+#button4:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #4294ff;
 }

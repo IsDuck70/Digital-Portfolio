@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet"/>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body onload="randomSubheader()">
@@ -20,16 +22,28 @@
     <!-- This content mostly consists of a header. -->
     <main>
         <div class="home-parent">
+
+          <div id="radios">
+            <label for="dark_mode" class="material-icons-outlined">
+              <input type="radio" name="mode" id="dark_mode" value="dark_mode" checked/>
+              <span class="material-icons">dark_mode</span>
+            </label>
+            <label for="light_mode" class="material-icons-outlined">
+              <input type="radio" name="mode" id="light_mode" value="light_mode"/>
+              <span class="material-icons">light_mode</span>
+            </label>
+          </div>
+
           <div class="home-child">
             <h1 class="header">Isaiah Durey</h1>
             <h2 id="subheader" class="header"></h2>
           </div>
 
           <div class="home-child2">
-            <button class="info-button" role="button">HTML/CSS/JS</button>
-            <button class="info-button" role="button">Python</button>
-            <button class="info-button" role="button">C#</button>
-            <button class="info-button" role="button">Java</button>
+            <button onclick="window.location.href='webDev.html'" id="button1" class="info-button" role="button">HTML/CSS/JS</button>
+            <button onclick="window.location.href='#'" id="button2" class="info-button" role="button">Python</button>
+            <button onclick="window.location.href='#'" id="button3" class="info-button" role="button">Java</button>
+            <button onclick="window.location.href='#'" id="button4" class="info-button" role="button">C#</button>
           </div>
         </div>
     </main>
@@ -42,5 +56,5 @@
 
   <script src="scripts/main.js"></script>
 
-  <!-- Website Built By: Isaiah Durey, Last Updated: 3/31/2022 -->
+  <!-- Website Built By: Isaiah Durey, Last Updated: 4/28/2022 -->
 </html>
